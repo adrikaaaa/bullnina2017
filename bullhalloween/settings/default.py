@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 import os
 import sys
+import dj_database_url
+
 
 # Django settings for {{ project_name }} - suitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -51,13 +53,8 @@ WSGI_APPLICATION = 'bullhalloween.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'bullhalloween',
-    }
-}
-
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 # Application definition
 # django debugging stuff
 ADMIN_TOOLS = (
