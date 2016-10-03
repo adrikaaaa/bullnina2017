@@ -31,7 +31,7 @@ ALLOWED_HOSTS = (
 SECRET_KEY = 'uo89wlv=@3r4w_1%@1tr(e$6m47(qr=jde=f@qj$_twes=)z9f'
 
 # Absolute paths for where the project and templates are stored.
-ABS_PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+ABS_PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
 ABS_TEMPLATES_PATH = '%s/templates' % ABS_PROJECT_ROOT
 
 # add root directory to PYTHONPATH
