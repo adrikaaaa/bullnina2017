@@ -524,15 +524,17 @@
 							<h2>Expositores</h2>
 						</header>
 						<div class="row uniform">
-							{% for expositor in expositores %}
-								<section class="4u(xlarge) 4u(large) 6u(medium) 12u$(small) 12u$(xsmall)">
-									<span class="image fit main">
-										<img src="/media/{{expositor.foto}}" alt="">
-									</span>
-									<h3>{{expositor.nome_marca}}</h3>
-									<p>{{expositor.descricao}}</p>
-								</section>
-							{% endfor %}
+							{% if expositores %}
+								{% for expositor in expositores %}
+									<section class="4u(xlarge) 4u(large) 6u(medium) 12u$(small) 12u$(xsmall)">
+										<span class="image fit main">
+											<img src="/media/{{expositor.foto}}" alt="">
+										</span>
+										<h3>{{expositor.nome_marca}}</h3>
+										<p>{{expositor.descricao}}</p>
+									</section>
+								{% endfor %}
+							{% endif %}
 						</div>
 
 					</div>
