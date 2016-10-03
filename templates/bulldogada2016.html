@@ -1,0 +1,90 @@
+{% load static %}{% load compress %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Bulldogada São Paulo - Halloween 2016</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'css/main.css?v=1' %}" />
+		
+		<!--[if lte IE 9]><link rel="stylesheet" href="{% static 'css/ie9.css' %}" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="{% static 'css/ie8.css' %}" /><![endif]-->
+	</head>
+	<body class="landing">
+		<a href="/" class="back-home">
+			<h3>VOLTAR</h3>
+		</a>
+		<div id="page-wrapper">
+			<div id="main" class="wrapper style1">
+				<div class="container">
+					<header class="major">
+						<h2>Veja quem já confirmou presença no Halloween 2016</h2>
+					</header>
+					<section id="content">
+						<div class="row">
+							{% for inscrito in inscritos %}	
+								<div class="3u 12u$(medium) t-center content-dog">
+									<div class="circle-avatar" style="background-image:url(/media/{{inscrito.foto}})"></div>
+									<h3>{{ inscrito.nome }}</h3>
+									<p><b>Proprietario:</b> {{inscrito.inscricao.proprietario}}</p>
+								</div>
+							{% endfor %}
+						</div>
+					</section>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{{ STATIC_URL }}js/jquery.min.js"></script>
+			<script src="{{ STATIC_URL }}js/jquery.scrolly.min.js"></script>
+			<script src="{{ STATIC_URL }}js/jquery.dropotron.min.js"></script>
+			<script src="{{ STATIC_URL }}js/jquery.scrollex.min.js"></script>
+			<script src="{{ STATIC_URL }}js/skel.min.js"></script>
+			<script src="{{ STATIC_URL }}js/masked-input.js"></script>
+			<script src="{{ STATIC_URL }}js/util.js"></script>
+			<script src="{{ STATIC_URL }}js/main.js"></script>
+			<script type="text/javascript">
+				jQuery(function($){
+					$(".mask-phone").mask("(99)9999-9999?9");
+
+					var contador = 0;
+
+					$('.add-dog').on('click', function(){
+						if (contador == 0){
+							$('.formset-2').css('display', 'block');
+							contador++;
+						}else if (contador == 1){
+							$('.formset-3').css('display', 'block');
+							contador++;
+						}else if (contador == 2){
+							$('.formset-4').css('display', 'block');
+							contador++;
+						}else if (contador == 3){
+							$('.formset-5').css('display', 'block');
+							contador++;
+							$('.add-dog').css('display', 'none');
+						}
+
+					})
+
+				})
+			</script>
+
+	</body>
+</html>

@@ -1,0 +1,740 @@
+{% load static %}{% load compress %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Bulldogada São Paulo - Halloween 2016</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'css/main.css?v=1' %}" />
+		
+		<!--[if lte IE 9]><link rel="stylesheet" href="{% static 'css/ie9.css' %}" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="{% static 'css/ie8.css' %}" /><![endif]-->
+	</head>
+	<body class="landing">
+		<div id="page-wrapper">
+			<section id="banner">
+				<div class="corner-ribbon top-left sticky red shadow">Dia 06/11 às 08:00</div>
+					<div class="content">
+						<span class="image logo-bull"><img src="{{ STATIC_URL }}images/logo-bulldogada.png" alt="" /></span>
+						<header>
+							<h2>Já somos</h2>
+							<h1 class="bull-qty">35</h1>
+							<h2>bulldogueiros</h2>
+							<p>que marcaremos presença no <b>Halloween 2016</b>.<br />
+							Não perca tempo e faça parte você também.</p>
+						</header>					
+						<div class="12u(large) 12u(medium) 12u(small)">
+							<ul class="actions vertical">
+								<li><a href="/halloween2016/" style="margin-top:10px" class="button special btn-presenca"><b>Veja quem já marcou presença</b></a></li>
+								<li><a href="#six" style="margin-top:10px" class="button special">Inscrição</a></li>
+							</ul>							
+						</div>
+					</div>
+					
+
+					<a href="#one" class="goto-next scrolly">Avançar</a>
+				</section>
+
+			<!-- One -->
+				<section id="one" class="spotlight style1 bottom">
+					<span class="image fit main"><img src="{{ STATIC_URL }}images/bullnina2016.jpg" alt="" /></span>
+					<div class="content">
+						<div class="container">
+							<div class="row">
+								<div class="4u 12u$(medium)">
+									<header>
+										<h2>Quem somos?</h2>
+										<p>Apaixonados pela raça e malucos por encontros como este</p>
+									</header>
+								</div>
+								<div class="4u 12u$(medium)">
+									<p>A Bulldogada São Paulo nasceu em 2011, num pequeno encontro com 5 bulldogs. A partir daí, a paixão pela raça só cresceu, chegando em mais de 5000 seguidores no Facebook</p>
+								</div>
+								<div class="4u$ 12u$(medium)">
+									<p>Aqui sempre rola de tudo, desde encontrinhos no parque até grandes encontros, onde quem mais se diverte são nossos gordos.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="#two" class="goto-next scrolly">Next</a>
+				</section>
+
+			<!-- Two -->
+				<section id="two" class="spotlight style2 right">
+					<span class="image fit main"><img src="{{ STATIC_URL }}images/halloween.jpg" alt="" /></span>
+					<div class="content">
+						<header>
+							<h2>O <span>"Halloween 2016"</span></h2>
+							<p>Junto com a bullnina, este é o evento mais aguardado do ano. Nele você leva seu gordo para conhecer outros amiguinhos e pode caprichar naquela fantasia especial. <br />
+							No dia além dos tradicionais desfiles de fantasias, temos a foto que marca o evento além de sorteios e brincadeiras.</p>
+						</header>						
+					</div>
+					<a href="#three" class="goto-next scrolly red-color">Next</a>
+				</section>
+			<!-- three-->
+				<section id="four" class="wrapper style1 special fade-up">
+					<div class="container">
+						<header class="major">
+							<h2>Veja o que teremos no dia</h2>
+						</header>
+						<div class="box alt">
+							<div class="row uniform">
+								<section class="4u 6u(medium) 12u$(xsmall)">
+									<span class="icon alt major fa-area-chart"></span>
+									<h3>Ambulancia Veterinaria</h3>
+									<p>A ambulancia ficará a disposicao bla bla bla.</p>
+								</section>
+								<section class="4u 6u$(medium) 12u$(xsmall)">
+									<span class="icon alt major fa-comment"></span>
+									<h3>Banho e tosa portatil</h3>
+									<p>Seu gordo cheiroso e limpinho.</p>
+								</section>
+								<section class="4u$ 6u(medium) 12u$(xsmall)">
+									<span class="icon alt major fa-flask"></span>
+									<h3>Barracas de lanches</h3>
+									<p>Delicias para ninguem ficar com fome.</p>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="five" class="wrapper background-prices style3 special fade">
+					<div class="container">
+						<header>
+							<h2>Quanto custa?</h2>
+						</header>
+						<div class="box alt">
+							
+							<div class="row">
+								<section class="-3u(xlarge) -3u(large) 6u(medium) 12u$(xsmall)">
+									<span class="icon red-ball alt major">$25</span>
+									<h3>25 reais por cão</h3>
+									<p>Direito a 2 humanos <br />+<br /> estacionamento</p>
+								</section>
+								<section class="6u(xlarge) 6u(large) 6u(medium) 12u$(xsmall)">
+									<span class="icon red-ball alt major">$15</span>
+									<h3>15 reais sem cão</h3>
+									<p>Direito a 1 humano <br />+<br /> estacionamento</p>
+								</section>
+							</div>
+
+							<div class="faixa-aviso-preco">
+								<h3><b>Atenção:</b> O pagamento será realizado na entrada do evento.</h3>
+							</div>							
+						</div>						
+					</div>
+				</section>
+
+				<section id="six" class="wrapper style2 special fade">
+					<div class="container">
+						{% if form_saved and form_saved == "subs" %}
+							<header>
+								<h2>Ficha de inscrição</h2>
+								<p>Sua inscrição foi efetuada com sucesso, nos vemos lá!</p>
+								<ul class="actions vertical">
+								<li><a href="/halloween2016/" style="margin-top:10px" class="button special btn-presenca"><b>Veja quem já marcou presença</b></a></li>
+							</ul>
+							</header>
+						{% else %}
+							<header>
+								<h2>Ficha de inscrição</h2>
+								<p>Preencha abaixo sua inscrição. Não há necessidade de preenchimento de outra pessoa para o mesmo animal, apenas o responsável é o suficiente</p>
+							</header>
+							<form method="post" action="#six" class="container" enctype="multipart/form-data">
+								{% csrf_token %}
+								{% if form_inscricao.errors or cachorro_form.errors %}
+									<div class="container-errors">
+										<h3>Ops, confira os erros abaixo e tente novamente.</h3>
+										<ul>
+										{% for field in form_inscricao %}
+											{% if field.errors %}
+												<li><u>{{ field.label }}</u> - {{ field.errors|striptags }}</li>
+											{% endif %}
+										{% endfor %}
+										
+										{% for form in cachorro_form %}
+											{% for field in form %}
+												{% if field.errors %}
+													<li><u>{{ field.label }}</u> - {{ field.errors|striptags }}</li>
+												{% endif %}
+											{% endfor %}		
+										{% endfor %}
+										
+										</ul>
+									</div>
+								{% endif %}
+								<div class="row uniform 50%">
+								
+									
+									<div class="6u 12u$(xsmall)">
+										{{ form_inscricao.proprietario }}
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										{{ form_inscricao.email }}
+									</div>
+									<div class="6u 12u$(xsmall)">
+										{{ form_inscricao.telefone }}
+									</div>
+									<div class="6u 12u$(xsmall)">
+										<div class="select-wrapper">
+											{{ form_inscricao.regiao }}	
+										</div>
+									</div>
+								</div>
+								<header style="margin-top: 20px">
+									<h2>Dados do cachorro</h2>
+									<p>Numero máximo de cachorros - 5.</p>
+								</header>
+								<div class="row uniform 50%">
+									{{ cachorro_form.management_form }}
+									<div class="row uniform 50%">
+										<div class="12u 12u$(xsmall) divisor">
+										</div>
+										<div class="6u 12u$(xsmall)">
+											{% if cachorro_form.0.nome.data %}
+												<input id="id_cachorro_set-0-nome" maxlength="120" name="cachorro_set-0-nome" placeholder="Nome do cachorro" type="text" value="{{cachorro_form.0.nome.data}}">
+											{% else %}
+												<input id="id_cachorro_set-0-nome" maxlength="120" name="cachorro_set-0-nome" placeholder="Nome do cachorro" type="text">
+											{% endif %}
+										</div>
+										<div class="6u 12u$(xsmall)">
+											<select id="id_cachorro_set-0-raca" name="cachorro_set-0-raca">
+												<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
+												<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
+												<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
+												<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
+												<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
+												<option value="LABRADOR">LABRADOR</option>
+												<option value="PUG">PUG</option>
+												<option value="VIRA LATA">VIRA LATA</option>
+												<option value="MALTÊS">MALTÊS</option>
+												<option value="YORKSHIRE">YORKSHIRE</option>
+												<option value="BOXER">BOXER</option>
+												<option value="PASTOR">PASTOR</option>
+												<option value="LHASA APSO">LHASA APSO</option>
+												<option value="OUTROS">OUTROS</option>
+											</select>
+										</div>
+										<div class="6u 12u$(xsmall)">
+											<select id="id_cachorro_set-0-idade" name="cachorro_set-0-idade">
+												<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
+												<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
+												<option value="2 ANOS">2 ANOS</option>
+												<option value="3 ANOS">3 ANOS</option>
+												<option value="4 ANOS">4 ANOS</option>
+												<option value="5 ANOS">5 ANOS</option>
+												<option value="6 ANOS">6 ANOS</option>
+												<option value="7 ANOS">7 ANOS</option>
+												<option value="8 ANOS">8 ANOS</option>
+												<option value="9 ANOS">9 ANOS</option>
+												<option value="10 ANOS">10 ANOS</option>
+												<option value="11 ANOS">11 ANOS</option>
+												<option value="12 ANOS">12 ANOS</option>
+												<option value="13 ANOS">13 ANOS</option>
+												<option value="14 ANOS">14 ANOS</option>
+												<option value="15 ANOS">15 ANOS</option>
+												<option value="16 ANOS">16 ANOS</option>
+												<option value="17 ANOS">17 ANOS</option>
+												<option value="18 ANOS">18 ANOS</option>
+												<option value="19 ANOS">19 ANOS</option>
+												<option value="20 ANOS">20 ANOS</option>
+												<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
+											</select>
+										</div>
+										<div class="3u 12u$(xsmall)">
+											<input id="id_cachorro_set-0-vacinado" name="cachorro_set-0-vacinado" type="checkbox">
+											<label for="id_cachorro_set-0-vacinado">Vacinado?</label>
+										</div>
+										<div class="3u 12u$(xsmall)">
+											<input id="id_cachorro_set-0-vermifugado" name="cachorro_set-0-vermifugado" type="checkbox">
+											<label for="id_cachorro_set-0-vermifugado">
+											Vermifugado?</label>
+										</div>
+										<div class="12u 12u$(xsmall)" style="margin-bottom: 20px;">
+											<label for="id_cachorro_set-0-foto"><b>Foto do cachorro</b></label>
+											<input id="id_cachorro_set-0-foto" name="cachorro_set-0-foto" type="file">
+										</div>
+										
+
+										<div class="12u 12u$(xsmall) divisor formset-2"></div>
+										<div class="6u 12u$(xsmall) formset-2">
+												<input id="id_cachorro_set-1-nome" maxlength="120" name="cachorro_set-1-nome" placeholder="Nome do cachorro" type="text">
+										</div>
+										<div class="6u 12u$(xsmall) formset-2">
+											<select id="id_cachorro_set-1-raca" name="cachorro_set-1-raca">
+												<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
+												<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
+												<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
+												<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
+												<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
+												<option value="LABRADOR">LABRADOR</option>
+												<option value="PUG">PUG</option>
+												<option value="VIRA LATA">VIRA LATA</option>
+												<option value="MALTÊS">MALTÊS</option>
+												<option value="YORKSHIRE">YORKSHIRE</option>
+												<option value="BOXER">BOXER</option>
+												<option value="PASTOR">PASTOR</option>
+												<option value="LHASA APSO">LHASA APSO</option>
+												<option value="OUTROS">OUTROS</option>
+											</select>
+										</div>
+										<div class="6u 12u$(xsmall) formset-2">
+											<select id="id_cachorro_set-1-idade" name="cachorro_set-1-idade">
+												<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
+												<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
+												<option value="2 ANOS">2 ANOS</option>
+												<option value="3 ANOS">3 ANOS</option>
+												<option value="4 ANOS">4 ANOS</option>
+												<option value="5 ANOS">5 ANOS</option>
+												<option value="6 ANOS">6 ANOS</option>
+												<option value="7 ANOS">7 ANOS</option>
+												<option value="8 ANOS">8 ANOS</option>
+												<option value="9 ANOS">9 ANOS</option>
+												<option value="10 ANOS">10 ANOS</option>
+												<option value="11 ANOS">11 ANOS</option>
+												<option value="12 ANOS">12 ANOS</option>
+												<option value="13 ANOS">13 ANOS</option>
+												<option value="14 ANOS">14 ANOS</option>
+												<option value="15 ANOS">15 ANOS</option>
+												<option value="16 ANOS">16 ANOS</option>
+												<option value="17 ANOS">17 ANOS</option>
+												<option value="18 ANOS">18 ANOS</option>
+												<option value="19 ANOS">19 ANOS</option>
+												<option value="20 ANOS">20 ANOS</option>
+												<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
+											</select>
+										</div>
+										<div class="3u 12u$(xsmall) formset-2">
+											<input id="id_cachorro_set-1-vacinado" name="cachorro_set-1-vacinado" type="checkbox">
+											<label for="id_cachorro_set-1-vacinado">Vacinado?</label>
+										</div>
+										<div class="3u 12u$(xsmall) formset-2">
+											<input id="id_cachorro_set-1-vermifugado" name="cachorro_set-1-vermifugado" type="checkbox">
+											<label for="id_cachorro_set-1-vermifugado">
+											Vermifugado?</label>
+										</div>
+										<div class="12u 12u$(xsmall) formset-2" style="margin-bottom: 20px;">
+											<label for="id_cachorro_set-1-foto"><b>Foto do cachorro</b></label>
+											<input id="id_cachorro_set-1-foto" name="cachorro_set-1-foto" type="file">
+										</div>
+										
+										
+											
+										<div class="12u 12u$(xsmall) divisor formset-3"></div>
+										<div class="6u 12u$(xsmall) formset-3">
+											<input id="id_cachorro_set-2-nome" maxlength="120" name="cachorro_set-2-nome" placeholder="Nome do cachorro" type="text">
+										</div>
+										<div class="6u 12u$(xsmall) formset-3">
+											<select id="id_cachorro_set-2-raca" name="cachorro_set-2-raca">
+												<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
+												<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
+												<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
+												<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
+												<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
+												<option value="LABRADOR">LABRADOR</option>
+												<option value="PUG">PUG</option>
+												<option value="VIRA LATA">VIRA LATA</option>
+												<option value="MALTÊS">MALTÊS</option>
+												<option value="YORKSHIRE">YORKSHIRE</option>
+												<option value="BOXER">BOXER</option>
+												<option value="PASTOR">PASTOR</option>
+												<option value="LHASA APSO">LHASA APSO</option>
+												<option value="OUTROS">OUTROS</option>
+											</select>
+										</div>
+										<div class="6u 12u$(xsmall) formset-3">
+											<select id="id_cachorro_set-2-idade" name="cachorro_set-2-idade">
+												<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
+												<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
+												<option value="2 ANOS">2 ANOS</option>
+												<option value="3 ANOS">3 ANOS</option>
+												<option value="4 ANOS">4 ANOS</option>
+												<option value="5 ANOS">5 ANOS</option>
+												<option value="6 ANOS">6 ANOS</option>
+												<option value="7 ANOS">7 ANOS</option>
+												<option value="8 ANOS">8 ANOS</option>
+												<option value="9 ANOS">9 ANOS</option>
+												<option value="10 ANOS">10 ANOS</option>
+												<option value="11 ANOS">11 ANOS</option>
+												<option value="12 ANOS">12 ANOS</option>
+												<option value="13 ANOS">13 ANOS</option>
+												<option value="14 ANOS">14 ANOS</option>
+												<option value="15 ANOS">15 ANOS</option>
+												<option value="16 ANOS">16 ANOS</option>
+												<option value="17 ANOS">17 ANOS</option>
+												<option value="18 ANOS">18 ANOS</option>
+												<option value="19 ANOS">19 ANOS</option>
+												<option value="20 ANOS">20 ANOS</option>
+												<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
+											</select>
+										</div>
+										<div class="3u 12u$(xsmall) formset-3">
+											<input id="id_cachorro_set-2-vacinado" name="cachorro_set-2-vacinado" type="checkbox">
+											<label for="id_cachorro_set-2-vacinado">Vacinado?</label>
+										</div>
+										<div class="3u 12u$(xsmall) formset-3">
+											<input id="id_cachorro_set-2-vermifugado" name="cachorro_set-0-vermifugado" type="checkbox">
+											<label for="id_cachorro_set-2-vermifugado">
+											Vermifugado?</label>
+										</div>
+										<div class="12u 12u$(xsmall) formset-3" style="margin-bottom: 20px;">
+											<label for="id_cachorro_set-2-foto"><b>Foto do cachorro</b></label>
+											<input id="id_cachorro_set-2-foto" name="cachorro_set-2-foto" type="file">
+										</div>
+										
+
+										<div class="12u 12u$(xsmall) divisor formset-4"></div>
+										<div class="6u 12u$(xsmall) formset-4">
+											<input id="id_cachorro_set-3-nome" maxlength="120" name="cachorro_set-3-nome" placeholder="Nome do cachorro" type="text">
+										</div>
+										<div class="6u 12u$(xsmall) formset-4">
+											<select id="id_cachorro_set-3-raca" name="cachorro_set-3-raca">
+												<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
+												<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
+												<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
+												<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
+												<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
+												<option value="LABRADOR">LABRADOR</option>
+												<option value="PUG">PUG</option>
+												<option value="VIRA LATA">VIRA LATA</option>
+												<option value="MALTÊS">MALTÊS</option>
+												<option value="YORKSHIRE">YORKSHIRE</option>
+												<option value="BOXER">BOXER</option>
+												<option value="PASTOR">PASTOR</option>
+												<option value="LHASA APSO">LHASA APSO</option>
+												<option value="OUTROS">OUTROS</option>
+											</select>
+										</div>
+										<div class="6u 12u$(xsmall) formset-4">
+											<select id="id_cachorro_set-3-idade" name="cachorro_set-3-idade">
+												<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
+												<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
+												<option value="2 ANOS">2 ANOS</option>
+												<option value="3 ANOS">3 ANOS</option>
+												<option value="4 ANOS">4 ANOS</option>
+												<option value="5 ANOS">5 ANOS</option>
+												<option value="6 ANOS">6 ANOS</option>
+												<option value="7 ANOS">7 ANOS</option>
+												<option value="8 ANOS">8 ANOS</option>
+												<option value="9 ANOS">9 ANOS</option>
+												<option value="10 ANOS">10 ANOS</option>
+												<option value="11 ANOS">11 ANOS</option>
+												<option value="12 ANOS">12 ANOS</option>
+												<option value="13 ANOS">13 ANOS</option>
+												<option value="14 ANOS">14 ANOS</option>
+												<option value="15 ANOS">15 ANOS</option>
+												<option value="16 ANOS">16 ANOS</option>
+												<option value="17 ANOS">17 ANOS</option>
+												<option value="18 ANOS">18 ANOS</option>
+												<option value="19 ANOS">19 ANOS</option>
+												<option value="20 ANOS">20 ANOS</option>
+												<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
+											</select>
+										</div>
+										<div class="3u 12u$(xsmall) formset-4">
+											<input id="id_cachorro_set-3-vacinado" name="cachorro_set-3-vacinado" type="checkbox">
+											<label for="id_cachorro_set-3-vacinado">Vacinado?</label>
+										</div>
+										<div class="3u 12u$(xsmall) formset-4">
+											<input id="id_cachorro_set-3-vermifugado" name="cachorro_set-3-vermifugado" type="checkbox">
+											<label for="id_cachorro_set-3-vermifugado">
+											Vermifugado?</label>
+										</div>
+										<div class="12u 12u$(xsmall) formset-4" style="margin-bottom: 20px;">
+											<label for="id_cachorro_set-3-foto"><b>Foto do cachorro</b></label>
+											<input id="id_cachorro_set-3-foto" name="cachorro_set-3-foto" type="file">
+										</div>
+								
+
+										<div class="12u 12u$(xsmall) divisor formset-5"></div>
+										<div class="6u 12u$(xsmall) formset-5">
+											<input id="id_cachorro_set-4-nome" maxlength="120" name="cachorro_set-4-nome" placeholder="Nome do cachorro" type="text">
+										</div>
+										<div class="6u 12u$(xsmall) formset-5">
+											<select id="id_cachorro_set-4-raca" name="cachorro_set-4-raca">
+												<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
+												<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
+												<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
+												<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
+												<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
+												<option value="LABRADOR">LABRADOR</option>
+												<option value="PUG">PUG</option>
+												<option value="VIRA LATA">VIRA LATA</option>
+												<option value="MALTÊS">MALTÊS</option>
+												<option value="YORKSHIRE">YORKSHIRE</option>
+												<option value="BOXER">BOXER</option>
+												<option value="PASTOR">PASTOR</option>
+												<option value="LHASA APSO">LHASA APSO</option>
+												<option value="OUTROS">OUTROS</option>
+											</select>
+										</div>
+										<div class="6u 12u$(xsmall) formset-5">
+											<select id="id_cachorro_set-4-idade" name="cachorro_set-4-idade">
+												<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
+												<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
+												<option value="2 ANOS">2 ANOS</option>
+												<option value="3 ANOS">3 ANOS</option>
+												<option value="4 ANOS">4 ANOS</option>
+												<option value="5 ANOS">5 ANOS</option>
+												<option value="6 ANOS">6 ANOS</option>
+												<option value="7 ANOS">7 ANOS</option>
+												<option value="8 ANOS">8 ANOS</option>
+												<option value="9 ANOS">9 ANOS</option>
+												<option value="10 ANOS">10 ANOS</option>
+												<option value="11 ANOS">11 ANOS</option>
+												<option value="12 ANOS">12 ANOS</option>
+												<option value="13 ANOS">13 ANOS</option>
+												<option value="14 ANOS">14 ANOS</option>
+												<option value="15 ANOS">15 ANOS</option>
+												<option value="16 ANOS">16 ANOS</option>
+												<option value="17 ANOS">17 ANOS</option>
+												<option value="18 ANOS">18 ANOS</option>
+												<option value="19 ANOS">19 ANOS</option>
+												<option value="20 ANOS">20 ANOS</option>
+												<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
+											</select>
+										</div>
+										<div class="3u 12u$(xsmall) formset-5">
+											<input id="id_cachorro_set-4-vacinado" name="cachorro_set-4-vacinado" type="checkbox">
+											<label for="id_cachorro_set-4-vacinado">Vacinado?</label>
+										</div>
+										<div class="3u 12u$(xsmall) formset-5">
+											<input id="id_cachorro_set-4-vermifugado" name="cachorro_set-4-vermifugado" type="checkbox">
+											<label for="id_cachorro_set-4-vermifugado">
+											Vermifugado?</label>
+										</div>
+										<div class="12u 12u$(xsmall) formset-5" style="margin-bottom: 20px;">
+											<label for="id_cachorro_set-4-foto"><b>Foto do cachorro</b></label>
+											<input id="id_cachorro_set-4-foto" name="cachorro_set-4-foto" type="file">
+										</div>
+									
+									<div class="4u 12u$(xsmall)"><input type="button" value="+ Adicionar outro cachorro" class="fit special add-dog"></div>									
+									<div class="-10u 12u$(xsmall)"><input type="submit" value="Enviar" class="fit special"></div>
+								</div>
+							</form>
+						{% endif %}	
+					</div>
+
+				</section>
+
+				<section id="seven" class="wrapper background-prices style3 special fade">
+					<div class="container">
+						
+						<header>
+							<h2>Expositores</h2>
+						</header>
+						<div class="row uniform">
+							{% for expositor in expositores %}
+								<section class="4u(xlarge) 4u(large) 6u(medium) 12u$(small) 12u$(xsmall)">
+									<span class="image fit main">
+										<img src="/media/{{expositor.foto}}" alt="">
+									</span>
+									<h3>{{expositor.nome_marca}}</h3>
+									<p>{{expositor.descricao}}</p>
+								</section>
+							{% endfor %}
+						</div>
+
+					</div>
+				</section>
+
+			<!-- Six -->
+				<section id="eight" class="wrapper style2 bg-inscricao-expositores special fade">
+					<div class="container">
+						{% if form_saved and form_saved == "expo" %}
+							<header>
+								<h2>Ficha de Expositores</h2>
+								<p>Cadastro efetuado com sucesso. Entraremos em contato em breve.</p>
+							</header>
+						{% else %}
+							<header>
+								<h2>Ficha para expositores</h2>
+								<p>Gostaria de expor seus produtos? Preencha os dados abaixo que entraremos em contato</p>
+							</header>
+							<form method="post" action="/saveexpo/#eight" class="container" enctype="multipart/form-data">
+								{% csrf_token %}
+								{% if form_expositores.errors %}
+									<div class="container-errors">
+										<h3>Ops, confira os erros abaixo e tente novamente.</h3>
+										<ul>
+										{% for field in form_expositores %}
+											{% if field.errors %}
+												<li><u>{{ field.label }}</u> - {{ field.errors|striptags }}</li>
+											{% endif %}
+										{% endfor %}
+										</ul>
+									</div>
+								{% endif %}
+								<div class="row uniform 50%">
+									<div class="6u 12u$(xsmall)">
+										{{ form_expositores.nome_marca }}
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										{{ form_expositores.proprietario }}
+									</div>
+									<div class="6u 12u$(xsmall)">
+										{{ form_expositores.email }}
+									</div>
+									<div class="6u 12u$(xsmall)">
+										{{ form_expositores.telefone }}
+									</div>
+									<div class="6u 12u$(xsmall)">
+										<div class="select-wrapper">
+											{{ form_expositores.ramo }}
+										</div>
+									</div>
+									<div class="6u 12u$(xsmall)">
+										{{ form_expositores.descricao }}
+									</div>
+									<div class="12u 12u$(xsmall)">
+										<label for="{{ form_expositores.foto.id_for_label }}"><b>Foto de divulgação</b></label>
+										{{ form_expositores.foto }}
+									</div>
+									<div class="-10u 12u$(xsmall)"><input type="submit" value="Enviar" class="fit special" /></div>
+								</div>
+							</form>
+						{% endif %}
+					</div>
+				</section>
+
+				<section id="nine" class="wrapper background-prices style3 special fade">
+					<div class="container">
+						
+						<header>
+							<h2>Patrocinadores</h2>
+						</header>
+						<div class="row uniform">
+							<section class="4u(xlarge) 4u(large) 6u(medium) 12u$(small) 12u$(xsmall)">
+								<span class="image fit main">
+									<img src="{{ STATIC_URL }}images/pic02.jpg" alt="">
+								</span>
+								<h3>Casa das alianças</h3>
+								<p>Com toda certeza é isso loren loren loren teste do maravilha</p>
+							</section>
+							<section class="4u(xlarge) 4u(large) 6u(medium) 12u$(small) 12u$(xsmall)">
+								<span class="image fit main">
+									<img src="{{ STATIC_URL }}images/pic02.jpg" alt="">
+								</span>
+								<h3>Casa das alianças</h3>
+								<p>Com toda certeza é isso loren loren loren teste do maravilha</p>
+							</section>
+						</div>
+
+					</div>
+				</section>
+
+			<!-- Six -->
+				<section id="ten" class="wrapper style2 bg-inscricao-patrocinadores special fade">
+					<div class="container">
+						{% if form_saved and form_saved == "patro" %}
+							<header>
+								<h2>Ficha de Patrocinadores</h2>
+								<p>Cadastro efetuado com sucesso. Entraremos em contato em breve</p>
+							</header>
+						{% else %}
+							<header>
+								<h2>Seja um patrocinador</h2>
+								<p>Divulgue sua empresa ou marca para todos do evento. Preencha os campos abaixo que entraremos em contato.</p>
+							</header>
+							<form method="post" action="/savepatro/#ten" class="container">
+								{% csrf_token %}
+								{% if form_patrocinadores.errors %}
+									<div class="container-errors">
+										<h3>Ops, confira os erros abaixo e tente novamente.</h3>
+										<ul>
+										{% for field in form_patrocinadores %}
+											{% if field.errors %}
+												<li><u>{{ field.label }}</u> - {{ field.errors|striptags }}</li>
+											{% endif %}
+										{% endfor %}
+										</ul>
+									</div>
+								{% endif %}
+								<div class="row uniform 50%">
+									<div class="6u 12u$(xsmall)">
+										{{ form_patrocinadores.nome_empresa }}
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										{{ form_patrocinadores.nome_responsavel }}
+									</div>
+									<div class="6u 12u$(xsmall)">
+										{{ form_patrocinadores.email }}
+									</div>
+									<div class="6u 12u$(xsmall)">
+										{{ form_patrocinadores.telefone }}
+									</div>
+									<div class="-10u 12u$(xsmall)"><input type="submit" value="Enviar" class="fit special" /></div>
+								</div>
+							</form>
+						{% endif %}
+					</div>
+				</section>
+
+				<section id="eleven" class="wrapper background-prices style3 special fade">
+					<div class="container">
+						
+						<header>
+							<h2>Endereço</h2>
+						</header>
+						<div class="row uniform">
+
+						</div>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{{ STATIC_URL }}js/jquery.min.js"></script>
+			<script src="{{ STATIC_URL }}js/jquery.scrolly.min.js"></script>
+			<script src="{{ STATIC_URL }}js/jquery.dropotron.min.js"></script>
+			<script src="{{ STATIC_URL }}js/jquery.scrollex.min.js"></script>
+			<script src="{{ STATIC_URL }}js/skel.min.js"></script>
+			<script src="{{ STATIC_URL }}js/masked-input.js"></script>
+			<script src="{{ STATIC_URL }}js/util.js"></script>
+			<script src="{{ STATIC_URL }}js/main.js"></script>
+			<script type="text/javascript">
+				jQuery(function($){
+					$(".mask-phone").mask("(99)9999-9999?9");
+
+					var contador = 0;
+
+					$('.add-dog').on('click', function(){
+						if (contador == 0){
+							$('.formset-2').css('display', 'block');
+							contador++;
+						}else if (contador == 1){
+							$('.formset-3').css('display', 'block');
+							contador++;
+						}else if (contador == 2){
+							$('.formset-4').css('display', 'block');
+							contador++;
+						}else if (contador == 3){
+							$('.formset-5').css('display', 'block');
+							contador++;
+							$('.add-dog').css('display', 'none');
+						}
+
+					})
+
+				})
+			</script>
+
+	</body>
+</html>
