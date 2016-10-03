@@ -58,7 +58,7 @@ coverage.xml
 *.db
 staticfiles/
 mediafiles/
-media/
+
 
 # Sphinx documentation
 docs/_build/
