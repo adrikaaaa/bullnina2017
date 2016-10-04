@@ -205,62 +205,66 @@
 									{{ cachorro_form.management_form }}
 									<div class="row uniform 50%">
 
-										<div class="6u 12u$(xsmall)">
+										<div class="6u 10u$(xsmall)">
 											{% if cachorro_form.0.nome.data %}
 												<input id="id_cachorro_set-0-nome" maxlength="120" name="cachorro_set-0-nome" placeholder="Nome do cachorro" type="text" value="{{cachorro_form.0.nome.data}}">
 											{% else %}
 												<input id="id_cachorro_set-0-nome" maxlength="120" name="cachorro_set-0-nome" placeholder="Nome do cachorro" type="text">
 											{% endif %}
 										</div>
-										<div class="6u 12u$(xsmall)">
-											<select id="id_cachorro_set-0-raca" name="cachorro_set-0-raca">
-												<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
-												<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
-												<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
-												<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
-												<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
-												<option value="LABRADOR">LABRADOR</option>
-												<option value="PUG">PUG</option>
-												<option value="VIRA LATA">VIRA LATA</option>
-												<option value="MALTÊS">MALTÊS</option>
-												<option value="YORKSHIRE">YORKSHIRE</option>
-												<option value="BOXER">BOXER</option>
-												<option value="PASTOR">PASTOR</option>
-												<option value="LHASA APSO">LHASA APSO</option>
-												<option value="OUTROS">OUTROS</option>
-											</select>
+										<div class="6u 10u$(xsmall)">
+											<div class="select-wrapper">
+												<select id="id_cachorro_set-0-raca" name="cachorro_set-0-raca">
+													<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
+													<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
+													<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
+													<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
+													<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
+													<option value="LABRADOR">LABRADOR</option>
+													<option value="PUG">PUG</option>
+													<option value="VIRA LATA">VIRA LATA</option>
+													<option value="MALTÊS">MALTÊS</option>
+													<option value="YORKSHIRE">YORKSHIRE</option>
+													<option value="BOXER">BOXER</option>
+													<option value="PASTOR">PASTOR</option>
+													<option value="LHASA APSO">LHASA APSO</option>
+													<option value="OUTROS">OUTROS</option>
+												</select>
+											</div>
 										</div>
-										<div class="6u 12u$(xsmall)">
-											<select id="id_cachorro_set-0-idade" name="cachorro_set-0-idade">
-												<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
-												<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
-												<option value="2 ANOS">2 ANOS</option>
-												<option value="3 ANOS">3 ANOS</option>
-												<option value="4 ANOS">4 ANOS</option>
-												<option value="5 ANOS">5 ANOS</option>
-												<option value="6 ANOS">6 ANOS</option>
-												<option value="7 ANOS">7 ANOS</option>
-												<option value="8 ANOS">8 ANOS</option>
-												<option value="9 ANOS">9 ANOS</option>
-												<option value="10 ANOS">10 ANOS</option>
-												<option value="11 ANOS">11 ANOS</option>
-												<option value="12 ANOS">12 ANOS</option>
-												<option value="13 ANOS">13 ANOS</option>
-												<option value="14 ANOS">14 ANOS</option>
-												<option value="15 ANOS">15 ANOS</option>
-												<option value="16 ANOS">16 ANOS</option>
-												<option value="17 ANOS">17 ANOS</option>
-												<option value="18 ANOS">18 ANOS</option>
-												<option value="19 ANOS">19 ANOS</option>
-												<option value="20 ANOS">20 ANOS</option>
-												<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
-											</select>
+										<div class="6u 10u$(xsmall)">
+											<div class="select-wrapper">
+												<select id="id_cachorro_set-0-idade" name="cachorro_set-0-idade">
+													<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
+													<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
+													<option value="2 ANOS">2 ANOS</option>
+													<option value="3 ANOS">3 ANOS</option>
+													<option value="4 ANOS">4 ANOS</option>
+													<option value="5 ANOS">5 ANOS</option>
+													<option value="6 ANOS">6 ANOS</option>
+													<option value="7 ANOS">7 ANOS</option>
+													<option value="8 ANOS">8 ANOS</option>
+													<option value="9 ANOS">9 ANOS</option>
+													<option value="10 ANOS">10 ANOS</option>
+													<option value="11 ANOS">11 ANOS</option>
+													<option value="12 ANOS">12 ANOS</option>
+													<option value="13 ANOS">13 ANOS</option>
+													<option value="14 ANOS">14 ANOS</option>
+													<option value="15 ANOS">15 ANOS</option>
+													<option value="16 ANOS">16 ANOS</option>
+													<option value="17 ANOS">17 ANOS</option>
+													<option value="18 ANOS">18 ANOS</option>
+													<option value="19 ANOS">19 ANOS</option>
+													<option value="20 ANOS">20 ANOS</option>
+													<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
+												</select>
+											</div>
 										</div>
-										<div class="3u 12u$(xsmall)">
+										<div class="3u 10u$(xsmall)">
 											<input id="id_cachorro_set-0-vacinado" name="cachorro_set-0-vacinado" type="checkbox">
 											<label for="id_cachorro_set-0-vacinado">Vacinado?</label>
 										</div>
-										<div class="3u 12u$(xsmall)">
+										<div class="3u 10u$(xsmall)">
 											<input id="id_cachorro_set-0-vermifugado" name="cachorro_set-0-vermifugado" type="checkbox">
 											<label for="id_cachorro_set-0-vermifugado">
 											Vermifugado?</label>
@@ -271,58 +275,62 @@
 										</div>
 										
 
-										<div class="6u 12u$(xsmall) formset-2">
+										<div class="6u 10u$(xsmall) formset-2">
 												<input id="id_cachorro_set-1-nome" maxlength="120" name="cachorro_set-1-nome" placeholder="Nome do cachorro" type="text">
 										</div>
-										<div class="6u 12u$(xsmall) formset-2">
-											<select id="id_cachorro_set-1-raca" name="cachorro_set-1-raca">
-												<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
-												<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
-												<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
-												<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
-												<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
-												<option value="LABRADOR">LABRADOR</option>
-												<option value="PUG">PUG</option>
-												<option value="VIRA LATA">VIRA LATA</option>
-												<option value="MALTÊS">MALTÊS</option>
-												<option value="YORKSHIRE">YORKSHIRE</option>
-												<option value="BOXER">BOXER</option>
-												<option value="PASTOR">PASTOR</option>
-												<option value="LHASA APSO">LHASA APSO</option>
-												<option value="OUTROS">OUTROS</option>
-											</select>
+										<div class="6u 10u$(xsmall) formset-2">
+											<div class="select-wrapper">
+												<select id="id_cachorro_set-1-raca" name="cachorro_set-1-raca">
+													<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
+													<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
+													<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
+													<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
+													<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
+													<option value="LABRADOR">LABRADOR</option>
+													<option value="PUG">PUG</option>
+													<option value="VIRA LATA">VIRA LATA</option>
+													<option value="MALTÊS">MALTÊS</option>
+													<option value="YORKSHIRE">YORKSHIRE</option>
+													<option value="BOXER">BOXER</option>
+													<option value="PASTOR">PASTOR</option>
+													<option value="LHASA APSO">LHASA APSO</option>
+													<option value="OUTROS">OUTROS</option>
+												</select>
+											</div>
 										</div>
-										<div class="6u 12u$(xsmall) formset-2">
-											<select id="id_cachorro_set-1-idade" name="cachorro_set-1-idade">
-												<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
-												<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
-												<option value="2 ANOS">2 ANOS</option>
-												<option value="3 ANOS">3 ANOS</option>
-												<option value="4 ANOS">4 ANOS</option>
-												<option value="5 ANOS">5 ANOS</option>
-												<option value="6 ANOS">6 ANOS</option>
-												<option value="7 ANOS">7 ANOS</option>
-												<option value="8 ANOS">8 ANOS</option>
-												<option value="9 ANOS">9 ANOS</option>
-												<option value="10 ANOS">10 ANOS</option>
-												<option value="11 ANOS">11 ANOS</option>
-												<option value="12 ANOS">12 ANOS</option>
-												<option value="13 ANOS">13 ANOS</option>
-												<option value="14 ANOS">14 ANOS</option>
-												<option value="15 ANOS">15 ANOS</option>
-												<option value="16 ANOS">16 ANOS</option>
-												<option value="17 ANOS">17 ANOS</option>
-												<option value="18 ANOS">18 ANOS</option>
-												<option value="19 ANOS">19 ANOS</option>
-												<option value="20 ANOS">20 ANOS</option>
-												<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
-											</select>
+										<div class="6u 10u$(xsmall) formset-2">
+											<div class="select-wrapper">
+												<select id="id_cachorro_set-1-idade" name="cachorro_set-1-idade">
+													<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
+													<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
+													<option value="2 ANOS">2 ANOS</option>
+													<option value="3 ANOS">3 ANOS</option>
+													<option value="4 ANOS">4 ANOS</option>
+													<option value="5 ANOS">5 ANOS</option>
+													<option value="6 ANOS">6 ANOS</option>
+													<option value="7 ANOS">7 ANOS</option>
+													<option value="8 ANOS">8 ANOS</option>
+													<option value="9 ANOS">9 ANOS</option>
+													<option value="10 ANOS">10 ANOS</option>
+													<option value="11 ANOS">11 ANOS</option>
+													<option value="12 ANOS">12 ANOS</option>
+													<option value="13 ANOS">13 ANOS</option>
+													<option value="14 ANOS">14 ANOS</option>
+													<option value="15 ANOS">15 ANOS</option>
+													<option value="16 ANOS">16 ANOS</option>
+													<option value="17 ANOS">17 ANOS</option>
+													<option value="18 ANOS">18 ANOS</option>
+													<option value="19 ANOS">19 ANOS</option>
+													<option value="20 ANOS">20 ANOS</option>
+													<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
+												</select>
+											</div>
 										</div>
-										<div class="3u 12u$(xsmall) formset-2">
+										<div class="3u 10u$(xsmall) formset-2">
 											<input id="id_cachorro_set-1-vacinado" name="cachorro_set-1-vacinado" type="checkbox">
 											<label for="id_cachorro_set-1-vacinado">Vacinado?</label>
 										</div>
-										<div class="3u 12u$(xsmall) formset-2">
+										<div class="3u 10u$(xsmall) formset-2">
 											<input id="id_cachorro_set-1-vermifugado" name="cachorro_set-1-vermifugado" type="checkbox">
 											<label for="id_cachorro_set-1-vermifugado">
 											Vermifugado?</label>
@@ -333,58 +341,62 @@
 										</div>
 										
 										
-										<div class="6u 12u$(xsmall) formset-3">
+										<div class="6u 10u$(xsmall) formset-3">
 											<input id="id_cachorro_set-2-nome" maxlength="120" name="cachorro_set-2-nome" placeholder="Nome do cachorro" type="text">
 										</div>
-										<div class="6u 12u$(xsmall) formset-3">
-											<select id="id_cachorro_set-2-raca" name="cachorro_set-2-raca">
-												<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
-												<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
-												<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
-												<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
-												<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
-												<option value="LABRADOR">LABRADOR</option>
-												<option value="PUG">PUG</option>
-												<option value="VIRA LATA">VIRA LATA</option>
-												<option value="MALTÊS">MALTÊS</option>
-												<option value="YORKSHIRE">YORKSHIRE</option>
-												<option value="BOXER">BOXER</option>
-												<option value="PASTOR">PASTOR</option>
-												<option value="LHASA APSO">LHASA APSO</option>
-												<option value="OUTROS">OUTROS</option>
-											</select>
+										<div class="6u 10u$(xsmall) formset-3">
+											<div class="select-wrapper">
+												<select id="id_cachorro_set-2-raca" name="cachorro_set-2-raca">
+													<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
+													<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
+													<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
+													<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
+													<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
+													<option value="LABRADOR">LABRADOR</option>
+													<option value="PUG">PUG</option>
+													<option value="VIRA LATA">VIRA LATA</option>
+													<option value="MALTÊS">MALTÊS</option>
+													<option value="YORKSHIRE">YORKSHIRE</option>
+													<option value="BOXER">BOXER</option>
+													<option value="PASTOR">PASTOR</option>
+													<option value="LHASA APSO">LHASA APSO</option>
+													<option value="OUTROS">OUTROS</option>
+												</select>
+											</div>
 										</div>
-										<div class="6u 12u$(xsmall) formset-3">
-											<select id="id_cachorro_set-2-idade" name="cachorro_set-2-idade">
-												<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
-												<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
-												<option value="2 ANOS">2 ANOS</option>
-												<option value="3 ANOS">3 ANOS</option>
-												<option value="4 ANOS">4 ANOS</option>
-												<option value="5 ANOS">5 ANOS</option>
-												<option value="6 ANOS">6 ANOS</option>
-												<option value="7 ANOS">7 ANOS</option>
-												<option value="8 ANOS">8 ANOS</option>
-												<option value="9 ANOS">9 ANOS</option>
-												<option value="10 ANOS">10 ANOS</option>
-												<option value="11 ANOS">11 ANOS</option>
-												<option value="12 ANOS">12 ANOS</option>
-												<option value="13 ANOS">13 ANOS</option>
-												<option value="14 ANOS">14 ANOS</option>
-												<option value="15 ANOS">15 ANOS</option>
-												<option value="16 ANOS">16 ANOS</option>
-												<option value="17 ANOS">17 ANOS</option>
-												<option value="18 ANOS">18 ANOS</option>
-												<option value="19 ANOS">19 ANOS</option>
-												<option value="20 ANOS">20 ANOS</option>
-												<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
-											</select>
+										<div class="6u 10u$(xsmall) formset-3">
+											<div class="select-wrapper">
+												<select id="id_cachorro_set-2-idade" name="cachorro_set-2-idade">
+													<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
+													<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
+													<option value="2 ANOS">2 ANOS</option>
+													<option value="3 ANOS">3 ANOS</option>
+													<option value="4 ANOS">4 ANOS</option>
+													<option value="5 ANOS">5 ANOS</option>
+													<option value="6 ANOS">6 ANOS</option>
+													<option value="7 ANOS">7 ANOS</option>
+													<option value="8 ANOS">8 ANOS</option>
+													<option value="9 ANOS">9 ANOS</option>
+													<option value="10 ANOS">10 ANOS</option>
+													<option value="11 ANOS">11 ANOS</option>
+													<option value="12 ANOS">12 ANOS</option>
+													<option value="13 ANOS">13 ANOS</option>
+													<option value="14 ANOS">14 ANOS</option>
+													<option value="15 ANOS">15 ANOS</option>
+													<option value="16 ANOS">16 ANOS</option>
+													<option value="17 ANOS">17 ANOS</option>
+													<option value="18 ANOS">18 ANOS</option>
+													<option value="19 ANOS">19 ANOS</option>
+													<option value="20 ANOS">20 ANOS</option>
+													<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
+												</select>
+											</div>
 										</div>
-										<div class="3u 12u$(xsmall) formset-3">
+										<div class="3u 10u$(xsmall) formset-3">
 											<input id="id_cachorro_set-2-vacinado" name="cachorro_set-2-vacinado" type="checkbox">
 											<label for="id_cachorro_set-2-vacinado">Vacinado?</label>
 										</div>
-										<div class="3u 12u$(xsmall) formset-3">
+										<div class="3u 10u$(xsmall) formset-3">
 											<input id="id_cachorro_set-2-vermifugado" name="cachorro_set-0-vermifugado" type="checkbox">
 											<label for="id_cachorro_set-2-vermifugado">
 											Vermifugado?</label>
@@ -395,58 +407,62 @@
 										</div>
 										
 
-										<div class="6u 12u$(xsmall) formset-4">
+										<div class="6u 10u$(xsmall) formset-4">
 											<input id="id_cachorro_set-3-nome" maxlength="120" name="cachorro_set-3-nome" placeholder="Nome do cachorro" type="text">
 										</div>
-										<div class="6u 12u$(xsmall) formset-4">
-											<select id="id_cachorro_set-3-raca" name="cachorro_set-3-raca">
-												<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
-												<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
-												<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
-												<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
-												<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
-												<option value="LABRADOR">LABRADOR</option>
-												<option value="PUG">PUG</option>
-												<option value="VIRA LATA">VIRA LATA</option>
-												<option value="MALTÊS">MALTÊS</option>
-												<option value="YORKSHIRE">YORKSHIRE</option>
-												<option value="BOXER">BOXER</option>
-												<option value="PASTOR">PASTOR</option>
-												<option value="LHASA APSO">LHASA APSO</option>
-												<option value="OUTROS">OUTROS</option>
-											</select>
+										<div class="6u 10u$(xsmall) formset-4">
+											<div class="select-wrapper">
+												<select id="id_cachorro_set-3-raca" name="cachorro_set-3-raca">
+													<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
+													<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
+													<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
+													<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
+													<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
+													<option value="LABRADOR">LABRADOR</option>
+													<option value="PUG">PUG</option>
+													<option value="VIRA LATA">VIRA LATA</option>
+													<option value="MALTÊS">MALTÊS</option>
+													<option value="YORKSHIRE">YORKSHIRE</option>
+													<option value="BOXER">BOXER</option>
+													<option value="PASTOR">PASTOR</option>
+													<option value="LHASA APSO">LHASA APSO</option>
+													<option value="OUTROS">OUTROS</option>
+												</select>
+											</div>
 										</div>
-										<div class="6u 12u$(xsmall) formset-4">
-											<select id="id_cachorro_set-3-idade" name="cachorro_set-3-idade">
-												<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
-												<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
-												<option value="2 ANOS">2 ANOS</option>
-												<option value="3 ANOS">3 ANOS</option>
-												<option value="4 ANOS">4 ANOS</option>
-												<option value="5 ANOS">5 ANOS</option>
-												<option value="6 ANOS">6 ANOS</option>
-												<option value="7 ANOS">7 ANOS</option>
-												<option value="8 ANOS">8 ANOS</option>
-												<option value="9 ANOS">9 ANOS</option>
-												<option value="10 ANOS">10 ANOS</option>
-												<option value="11 ANOS">11 ANOS</option>
-												<option value="12 ANOS">12 ANOS</option>
-												<option value="13 ANOS">13 ANOS</option>
-												<option value="14 ANOS">14 ANOS</option>
-												<option value="15 ANOS">15 ANOS</option>
-												<option value="16 ANOS">16 ANOS</option>
-												<option value="17 ANOS">17 ANOS</option>
-												<option value="18 ANOS">18 ANOS</option>
-												<option value="19 ANOS">19 ANOS</option>
-												<option value="20 ANOS">20 ANOS</option>
-												<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
-											</select>
+										<div class="6u 10u$(xsmall) formset-4">
+											<div class="select-wrapper">
+												<select id="id_cachorro_set-3-idade" name="cachorro_set-3-idade">
+													<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
+													<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
+													<option value="2 ANOS">2 ANOS</option>
+													<option value="3 ANOS">3 ANOS</option>
+													<option value="4 ANOS">4 ANOS</option>
+													<option value="5 ANOS">5 ANOS</option>
+													<option value="6 ANOS">6 ANOS</option>
+													<option value="7 ANOS">7 ANOS</option>
+													<option value="8 ANOS">8 ANOS</option>
+													<option value="9 ANOS">9 ANOS</option>
+													<option value="10 ANOS">10 ANOS</option>
+													<option value="11 ANOS">11 ANOS</option>
+													<option value="12 ANOS">12 ANOS</option>
+													<option value="13 ANOS">13 ANOS</option>
+													<option value="14 ANOS">14 ANOS</option>
+													<option value="15 ANOS">15 ANOS</option>
+													<option value="16 ANOS">16 ANOS</option>
+													<option value="17 ANOS">17 ANOS</option>
+													<option value="18 ANOS">18 ANOS</option>
+													<option value="19 ANOS">19 ANOS</option>
+													<option value="20 ANOS">20 ANOS</option>
+													<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
+												</select>
+											</div>
 										</div>
-										<div class="3u 12u$(xsmall) formset-4">
+										<div class="3u 10u$(xsmall) formset-4">
 											<input id="id_cachorro_set-3-vacinado" name="cachorro_set-3-vacinado" type="checkbox">
 											<label for="id_cachorro_set-3-vacinado">Vacinado?</label>
 										</div>
-										<div class="3u 12u$(xsmall) formset-4">
+										<div class="3u 10u$(xsmall) formset-4">
 											<input id="id_cachorro_set-3-vermifugado" name="cachorro_set-3-vermifugado" type="checkbox">
 											<label for="id_cachorro_set-3-vermifugado">
 											Vermifugado?</label>
@@ -457,58 +473,62 @@
 										</div>
 								
 
-										<div class="6u 12u$(xsmall) formset-5">
+										<div class="6u 10u$(xsmall) formset-5">
 											<input id="id_cachorro_set-4-nome" maxlength="120" name="cachorro_set-4-nome" placeholder="Nome do cachorro" type="text">
 										</div>
-										<div class="6u 12u$(xsmall) formset-5">
-											<select id="id_cachorro_set-4-raca" name="cachorro_set-4-raca">
-												<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
-												<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
-												<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
-												<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
-												<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
-												<option value="LABRADOR">LABRADOR</option>
-												<option value="PUG">PUG</option>
-												<option value="VIRA LATA">VIRA LATA</option>
-												<option value="MALTÊS">MALTÊS</option>
-												<option value="YORKSHIRE">YORKSHIRE</option>
-												<option value="BOXER">BOXER</option>
-												<option value="PASTOR">PASTOR</option>
-												<option value="LHASA APSO">LHASA APSO</option>
-												<option value="OUTROS">OUTROS</option>
-											</select>
+										<div class="6u 10u$(xsmall) formset-5">
+											<div class="select-wrapper">
+												<select id="id_cachorro_set-4-raca" name="cachorro_set-4-raca">
+													<option value="" selected="selected">SELECIONE A RAÇA DO ANIMAL</option>
+													<option value="BULDOGUE INGLÊS">BULDOGUE INGLÊS</option>
+													<option value="BULDOGUE FRANCÊS">BULDOGUE FRANCÊS</option>
+													<option value="GOLDEN RETRIEVER">GOLDEN RETRIEVER</option>
+													<option value="SPITZ ALEMÃO">SPITZ ALEMÃO</option>
+													<option value="LABRADOR">LABRADOR</option>
+													<option value="PUG">PUG</option>
+													<option value="VIRA LATA">VIRA LATA</option>
+													<option value="MALTÊS">MALTÊS</option>
+													<option value="YORKSHIRE">YORKSHIRE</option>
+													<option value="BOXER">BOXER</option>
+													<option value="PASTOR">PASTOR</option>
+													<option value="LHASA APSO">LHASA APSO</option>
+													<option value="OUTROS">OUTROS</option>
+												</select>
+											</div>
 										</div>
-										<div class="6u 12u$(xsmall) formset-5">
-											<select id="id_cachorro_set-4-idade" name="cachorro_set-4-idade">
-												<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
-												<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
-												<option value="2 ANOS">2 ANOS</option>
-												<option value="3 ANOS">3 ANOS</option>
-												<option value="4 ANOS">4 ANOS</option>
-												<option value="5 ANOS">5 ANOS</option>
-												<option value="6 ANOS">6 ANOS</option>
-												<option value="7 ANOS">7 ANOS</option>
-												<option value="8 ANOS">8 ANOS</option>
-												<option value="9 ANOS">9 ANOS</option>
-												<option value="10 ANOS">10 ANOS</option>
-												<option value="11 ANOS">11 ANOS</option>
-												<option value="12 ANOS">12 ANOS</option>
-												<option value="13 ANOS">13 ANOS</option>
-												<option value="14 ANOS">14 ANOS</option>
-												<option value="15 ANOS">15 ANOS</option>
-												<option value="16 ANOS">16 ANOS</option>
-												<option value="17 ANOS">17 ANOS</option>
-												<option value="18 ANOS">18 ANOS</option>
-												<option value="19 ANOS">19 ANOS</option>
-												<option value="20 ANOS">20 ANOS</option>
-												<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
-											</select>
+										<div class="6u 10u$(xsmall) formset-5">
+											<div class="select-wrapper">
+												<select id="id_cachorro_set-4-idade" name="cachorro_set-4-idade">
+													<option value="" selected="selected">SELECIONE A IDADE DO ANIMAL</option>
+													<option value="ATÉ 1 ANO">ATÉ 1 ANO</option>
+													<option value="2 ANOS">2 ANOS</option>
+													<option value="3 ANOS">3 ANOS</option>
+													<option value="4 ANOS">4 ANOS</option>
+													<option value="5 ANOS">5 ANOS</option>
+													<option value="6 ANOS">6 ANOS</option>
+													<option value="7 ANOS">7 ANOS</option>
+													<option value="8 ANOS">8 ANOS</option>
+													<option value="9 ANOS">9 ANOS</option>
+													<option value="10 ANOS">10 ANOS</option>
+													<option value="11 ANOS">11 ANOS</option>
+													<option value="12 ANOS">12 ANOS</option>
+													<option value="13 ANOS">13 ANOS</option>
+													<option value="14 ANOS">14 ANOS</option>
+													<option value="15 ANOS">15 ANOS</option>
+													<option value="16 ANOS">16 ANOS</option>
+													<option value="17 ANOS">17 ANOS</option>
+													<option value="18 ANOS">18 ANOS</option>
+													<option value="19 ANOS">19 ANOS</option>
+													<option value="20 ANOS">20 ANOS</option>
+													<option value="MAIS DE 20 ANOS">MAIS DE 20 ANOS</option>
+												</select>
+											</div>
 										</div>
-										<div class="3u 12u$(xsmall) formset-5">
+										<div class="3u 10u$(xsmall) formset-5">
 											<input id="id_cachorro_set-4-vacinado" name="cachorro_set-4-vacinado" type="checkbox">
 											<label for="id_cachorro_set-4-vacinado">Vacinado?</label>
 										</div>
-										<div class="3u 12u$(xsmall) formset-5">
+										<div class="3u 10u$(xsmall) formset-5">
 											<input id="id_cachorro_set-4-vermifugado" name="cachorro_set-4-vermifugado" type="checkbox">
 											<label for="id_cachorro_set-4-vermifugado">
 											Vermifugado?</label>
@@ -518,8 +538,8 @@
 											<input id="id_cachorro_set-4-foto" name="cachorro_set-4-foto" type="file">
 										</div>
 									
-									<div class="4u 12u$(xsmall)"><input type="button" value="+ Adicionar outro cachorro" class="fit special add-dog"></div>									
-									<div class="-10u 12u$(xsmall)"><input type="submit" value="Enviar" class="fit special btn-enviar"></div>
+									<div class="4u 10u$(xsmall)"><input type="button" value="+ Adicionar outro cachorro" class="fit special add-dog"></div>									
+									<div class="-10u 10u$(xsmall)"><input type="submit" value="Enviar" class="fit special btn-enviar"></div>
 								</div>
 							</form>
 						{% endif %}	

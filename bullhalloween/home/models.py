@@ -79,6 +79,10 @@ class Inscricao(models.Model):
 	ativo = models.BooleanField(
 			default=True)
 
+	class Meta:
+		verbose_name = u"Inscrição"
+		verbose_name_plural = u"Inscrições"
+
 
 class Cachorro(models.Model):
 	inscricao = models.ForeignKey(Inscricao,
@@ -99,6 +103,9 @@ class Cachorro(models.Model):
 			default=False,
 			verbose_name=u"Vermifugado?")
 
+	class Meta:
+		verbose_name = u"Cachorro"
+		verbose_name_plural = u"Cachorros"
 
 class Expositor(models.Model):
 	nome_marca = models.CharField(max_length=120,
@@ -118,6 +125,9 @@ class Expositor(models.Model):
 	ativo = models.BooleanField(
 			default=False)
 
+	class Meta:
+		verbose_name = u"Expositor"
+		verbose_name_plural = u"Expositores"
 
 class Patrocinador(models.Model):
 	nome_empresa = models.CharField(max_length=120, 
@@ -129,3 +139,7 @@ class Patrocinador(models.Model):
 								verbose_name=u"Telefone")
 	data_criacao = models.DateTimeField(
 	        default=timezone.now)
+
+	class Meta:
+		verbose_name = u"Patrocinador"
+		verbose_name_plural = u"Patrocinadores"

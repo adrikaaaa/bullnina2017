@@ -17,3 +17,4 @@ gunicorn
 psycopg2
 dj-database-url
 cloudinary==1.4.0
+djangocms_admin_style
