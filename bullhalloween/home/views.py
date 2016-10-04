@@ -33,6 +33,7 @@ class HomeView(TemplateView):
                     crop='fill')
                 })
 
+        context['numero_inscricao'] = Inscricao.objects.count()    
         context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = PatrocinadorForm()
@@ -59,9 +60,24 @@ class HomeView(TemplateView):
                 formset.save() 
             
                 request.session['save_form'] = "subs"
-                return HttpResponseRedirect('/#six')       
+                return HttpResponseRedirect('/#six') 
+
+        expositores = []
+        objs = Expositor.objects.filter(ativo=True).all()
+        for expo in objs:
+            expositores.append({
+                'nome_marca': expo.nome_marca,
+                'descricao': expo.descricao,
+                'foto': expo.foto.build_url(
+                    width=600,
+                    height=400,
+                    crop='fill')
+                })
 
         context = {}
+        
+        context['numero_inscricao'] = Inscricao.objects.count()   
+        
         context['form_inscricao'] = form_inscricao
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = PatrocinadorForm()
@@ -74,8 +90,21 @@ class FormExpositoresView(TemplateView):
     template_name = 'index.html'
 
     def get(self, request, *args, **kwargs):
-        
+
+        objs = Expositor.objects.filter(ativo=True).all()
+        for expo in objs:
+            expositores.append({
+                'nome_marca': expo.nome_marca,
+                'descricao': expo.descricao,
+                'foto': expo.foto.build_url(
+                    width=600,
+                    height=400,
+                    crop='fill')
+                })
+
         context = {}
+        
+        context['numero_inscricao'] = Inscricao.objects.count()
         context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = PatrocinadorForm()
@@ -90,7 +119,20 @@ class FormExpositoresView(TemplateView):
         	request.session['save_form'] = "expo"
         	return HttpResponseRedirect('/#eight')
 
-        context = {}    
+        objs = Expositor.objects.filter(ativo=True).all()
+        for expo in objs:
+            expositores.append({
+                'nome_marca': expo.nome_marca,
+                'descricao': expo.descricao,
+                'foto': expo.foto.build_url(
+                    width=600,
+                    height=400,
+                    crop='fill')
+                })
+
+        context = {}
+        
+        context['numero_inscricao'] = Inscricao.objects.count()  
         context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = form_expositor
         context['form_patrocinadores'] = PatrocinadorForm()
@@ -103,7 +145,20 @@ class FormPatrocinadoresView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         
+        objs = Expositor.objects.filter(ativo=True).all()
+        for expo in objs:
+            expositores.append({
+                'nome_marca': expo.nome_marca,
+                'descricao': expo.descricao,
+                'foto': expo.foto.build_url(
+                    width=600,
+                    height=400,
+                    crop='fill')
+                })
+
         context = {}
+        
+        context['numero_inscricao'] = Inscricao.objects.count()
         context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = PatrocinadorForm()
@@ -117,7 +172,20 @@ class FormPatrocinadoresView(TemplateView):
         	request.session['save_form'] = "patro"
         	return HttpResponseRedirect('/#ten')
 
-        context = {}	
+        objs = Expositor.objects.filter(ativo=True).all()
+        for expo in objs:
+            expositores.append({
+                'nome_marca': expo.nome_marca,
+                'descricao': expo.descricao,
+                'foto': expo.foto.build_url(
+                    width=600,
+                    height=400,
+                    crop='fill')
+                })
+
+        context = {}
+        
+        context['numero_inscricao'] = Inscricao.objects.count()	
        	context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = form_patrocinador
