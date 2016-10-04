@@ -16,3 +16,4 @@ sqlparse==0.1.15
 gunicorn
 psycopg2
 dj-database-url
+cloudinary==1.4.0
