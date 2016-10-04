@@ -6,13 +6,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="{% static 'css/main.css?v=1' %}" />
+		<meta property="og:url" content="https://halloweenbulldogada.herokuapp.com/">
 		<meta property="og:title" content="Bulldogada Halloween 2016">
 		<meta property="og:site_name" content="Bulldogada Halloween 2016">
 		<meta property="og:description" content="A Bulldogada Halloween 2016 está chegando, já garantiu sua vaga? Não deixe para a última hora">
 		<meta property="og:image" content="https://halloweenbulldogada.herokuapp.com/static/images/logo-bulldogada.png">
 		<meta property="og:image:type" content="image/png">
-		<meta property="og:image:width" content="365"> /** PIXELS **/
-		<meta property="og:image:height" content="446"> /** PIXELS **/
+		<meta property="og:image:width" content="365"> 
+		<meta property="og:image:height" content="446">
 
 		
 		<!--[if lte IE 9]><link rel="stylesheet" href="{% static 'css/ie9.css' %}" /><![endif]-->
@@ -644,31 +645,42 @@
 							<h2>Patrocinadores</h2>
 						</header>
 						<div class="row uniform">
-							<section class="3u 6u(medium) 12u$(small) 12u$(xsmall)">
+							<section class="2u 4u(medium) 6u$(small) 16u$(xsmall)">
 								<span class="image fit main">
-									<img src="http://www.royalcanin.com.br/extension/site_subsidiary_v3/design/subsidiary_v3/images/article/no-img-article.png" alt="">
+									<img src="{{ STATIC_URL }}images/logoparceiros/luqpet.jpg" alt="">
 								</span>
 							</section>
-							<section class="3u 6u(medium) 12u$(small) 12u$(xsmall)">
+							<section class="2u 4u(medium) 6u$(small) 16u$(xsmall)">
 								<span class="image fit main">
-									<img src="http://d17lu9slax0fqq.cloudfront.net/image/fb-logo.jpg" alt="">
+									<img src="{{ STATIC_URL }}images/logoparceiros/NinaDamascoDecor.jpg" alt="">
 								</span>
 							</section>
-							<section class="3u 6u(medium) 12u$(small) 12u$(xsmall)">
+							<section class="2u 4u(medium) 6u$(small) 16u$(xsmall)">
 								<span class="image fit main">
-									<img src="http://images.canadianfreestuff.com/wp-content/uploads/2016/03/purina3.jpg" alt="">
+									<img src="{{ STATIC_URL }}images/logoparceiros/logoforpetovers.png" alt="">
 								</span>
 							</section>
-							<section class="3u 6u(medium) 12u$(small) 12u$(xsmall)">
+							<section class="2u 4u(medium) 6u$(small) 16u$(xsmall)">
 								<span class="image fit main">
-									<img src="https://pbs.twimg.com/profile_images/458869168054358016/R2CYsW5X.png" alt="">
+									<img src="{{ STATIC_URL }}images/logoparceiros/Dogzilians.jpg" alt="">
 								</span>
 							</section>
-							<section class="3u 6u(medium) 12u$(small) 12u$(xsmall)">
+							<section class="2u 4u(medium) 6u$(small) 16u$(xsmall)">
 								<span class="image fit main">
-									<img src="http://www.apcd.org.br/clubedebeneficios/imagens/clientes/logotipos/logopetz.jpg" alt="">
+									<img src="{{ STATIC_URL }}images/logoparceiros/logo biofresh.JPG" alt="">
 								</span>
 							</section>
+							<section class="2u 4u(medium) 6u$(small) 16u$(xsmall)">
+								<span class="image fit main">
+									<img src="{{ STATIC_URL }}images/logoparceiros/tee-uauh.png" alt="">
+								</span>
+							</section>
+							<section class="2u 4u(medium) 6u$(small) 16u$(xsmall)">
+								<span class="image fit main">
+									<img src="{{ STATIC_URL }}images/logoparceiros/petguide-sabedoria-pet-logo.png" alt="">
+								</span>
+							</section>
+							
 						</div>
 					</div>
 				</section>
