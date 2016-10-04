@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 import sys
 import dj_database_url
-
+import cloudinary
 
 # Django settings for {{ project_name }} - suitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -199,3 +199,8 @@ LOGGING = {
     }
 }
 
+cloudinary.config( 
+  cloud_name = "dfsgt9ict", 
+  api_key = "441665674232823", 
+  api_secret = "3KjqmCmTF9ddW86w3Gv_wPow6Iw" 
+)

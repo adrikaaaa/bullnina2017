@@ -32,6 +32,6 @@ urlpatterns = [
     url(r'^savepatro/', FormPatrocinadoresView.as_view(), name='save_patrocinador'),
     url(r'^halloween2016/', HalloweenView.as_view(), name='halloween'),
     url(r'^admin/', include(admin.site.urls)),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.UPLOAD_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 

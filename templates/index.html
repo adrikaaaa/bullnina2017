@@ -80,20 +80,36 @@
 						<div class="box alt">
 							<div class="row uniform">
 								<section class="4u 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-area-chart"></span>
+									<span class="icon alt major fa-ambulance"></span>
 									<h3>Ambulancia Veterinaria</h3>
-									<p>A ambulancia ficará a disposicao bla bla bla.</p>
+									<p>Disponível durante todo o evento.</p>
 								</section>
 								<section class="4u 6u$(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-comment"></span>
+									<span class="icon alt major fa-tint"></span>
 									<h3>Banho e tosa portatil</h3>
-									<p>Seu gordo cheiroso e limpinho.</p>
+									<p>Aproveite e dê um trato no totó.</p>
 								</section>
 								<section class="4u$ 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-flask"></span>
+									<span class="icon alt major fa-cutlery"></span>
 									<h3>Barracas de lanches</h3>
 									<p>Delicias para ninguem ficar com fome.</p>
 								</section>
+								<section class="4u$ 6u(medium) 12u$(xsmall)">
+									<span class="icon alt major fa-life-ring"></span>
+									<h3>Piscina</h3>
+									<p>Sem estresse com calor.</p>
+								</section>
+								<section class="4u$ 6u(medium) 12u$(xsmall)">
+									<span class="icon alt major fa-smile-o"></span>
+									<h3>Brincadeiras</h3>
+									<p>Todo mundo se diverte.</p>
+								</section>
+								<section class="4u$ 6u(medium) 12u$(xsmall)">
+									<span class="icon alt major fa-gift"></span>
+									<h3>Sorteios</h3>
+									<p>Brindes incríveis no final do evento.</p>
+								</section>
+								
 							</div>
 						</div>
 					</div>
@@ -106,12 +122,12 @@
 						<div class="box alt">
 							
 							<div class="row">
-								<section class="-3u(xlarge) -3u(large) 6u(medium) 12u$(xsmall)">
+								<section class="-3u 6u(medium) 12u$(xsmall)">
 									<span class="icon red-ball alt major">$25</span>
 									<h3>25 reais por cão</h3>
 									<p>Direito a 2 humanos <br />+<br /> estacionamento</p>
 								</section>
-								<section class="6u(xlarge) 6u(large) 6u(medium) 12u$(xsmall)">
+								<section class="6u 6u(medium) 12u$(xsmall)">
 									<span class="icon red-ball alt major">$15</span>
 									<h3>15 reais sem cão</h3>
 									<p>Direito a 1 humano <br />+<br /> estacionamento</p>
@@ -183,13 +199,12 @@
 								</div>
 								<header style="margin-top: 20px">
 									<h2>Dados do cachorro</h2>
-									<p>Numero máximo de cachorros - 5.</p>
+									<p>Preencha abaixo os dados de seu cão. Caso queira cadastrar mais de 1 cão clique em <b>adicionar outro cachorro</b>, limitado até 5 cães por cadastro.</p>
 								</header>
 								<div class="row uniform 50%">
 									{{ cachorro_form.management_form }}
 									<div class="row uniform 50%">
-										<div class="12u 12u$(xsmall) divisor">
-										</div>
+
 										<div class="6u 12u$(xsmall)">
 											{% if cachorro_form.0.nome.data %}
 												<input id="id_cachorro_set-0-nome" maxlength="120" name="cachorro_set-0-nome" placeholder="Nome do cachorro" type="text" value="{{cachorro_form.0.nome.data}}">
@@ -256,7 +271,6 @@
 										</div>
 										
 
-										<div class="12u 12u$(xsmall) divisor formset-2"></div>
 										<div class="6u 12u$(xsmall) formset-2">
 												<input id="id_cachorro_set-1-nome" maxlength="120" name="cachorro_set-1-nome" placeholder="Nome do cachorro" type="text">
 										</div>
@@ -319,8 +333,6 @@
 										</div>
 										
 										
-											
-										<div class="12u 12u$(xsmall) divisor formset-3"></div>
 										<div class="6u 12u$(xsmall) formset-3">
 											<input id="id_cachorro_set-2-nome" maxlength="120" name="cachorro_set-2-nome" placeholder="Nome do cachorro" type="text">
 										</div>
@@ -383,7 +395,6 @@
 										</div>
 										
 
-										<div class="12u 12u$(xsmall) divisor formset-4"></div>
 										<div class="6u 12u$(xsmall) formset-4">
 											<input id="id_cachorro_set-3-nome" maxlength="120" name="cachorro_set-3-nome" placeholder="Nome do cachorro" type="text">
 										</div>
@@ -446,7 +457,6 @@
 										</div>
 								
 
-										<div class="12u 12u$(xsmall) divisor formset-5"></div>
 										<div class="6u 12u$(xsmall) formset-5">
 											<input id="id_cachorro_set-4-nome" maxlength="120" name="cachorro_set-4-nome" placeholder="Nome do cachorro" type="text">
 										</div>
@@ -509,7 +519,7 @@
 										</div>
 									
 									<div class="4u 12u$(xsmall)"><input type="button" value="+ Adicionar outro cachorro" class="fit special add-dog"></div>									
-									<div class="-10u 12u$(xsmall)"><input type="submit" value="Enviar" class="fit special"></div>
+									<div class="-10u 12u$(xsmall)"><input type="submit" value="Enviar" class="fit special btn-enviar"></div>
 								</div>
 							</form>
 						{% endif %}	
@@ -528,7 +538,7 @@
 								{% for expositor in expositores %}
 									<section class="4u(xlarge) 4u(large) 6u(medium) 12u$(small) 12u$(xsmall)">
 										<span class="image fit main">
-											<img src="/media/{{expositor.foto}}" alt="">
+											<img src="{{expositor.foto}}" alt="">
 										</span>
 										<h3>{{expositor.nome_marca}}</h3>
 										<p>{{expositor.descricao}}</p>
@@ -592,7 +602,7 @@
 										<label for="{{ form_expositores.foto.id_for_label }}"><b>Foto de divulgação</b></label>
 										{{ form_expositores.foto }}
 									</div>
-									<div class="-10u 12u$(xsmall)"><input type="submit" value="Enviar" class="fit special" /></div>
+									<div class="-10u 12u$(xsmall)"><input type="submit" value="Enviar" class="fit special btn-enviar" /></div>
 								</div>
 							</form>
 						{% endif %}
@@ -606,22 +616,32 @@
 							<h2>Patrocinadores</h2>
 						</header>
 						<div class="row uniform">
-							<section class="4u(xlarge) 4u(large) 6u(medium) 12u$(small) 12u$(xsmall)">
+							<section class="3u 6u(medium) 12u$(small) 12u$(xsmall)">
 								<span class="image fit main">
-									<img src="{{ STATIC_URL }}images/pic02.jpg" alt="">
+									<img src="http://www.royalcanin.com.br/extension/site_subsidiary_v3/design/subsidiary_v3/images/article/no-img-article.png" alt="">
 								</span>
-								<h3>Casa das alianças</h3>
-								<p>Com toda certeza é isso loren loren loren teste do maravilha</p>
 							</section>
-							<section class="4u(xlarge) 4u(large) 6u(medium) 12u$(small) 12u$(xsmall)">
+							<section class="3u 6u(medium) 12u$(small) 12u$(xsmall)">
 								<span class="image fit main">
-									<img src="{{ STATIC_URL }}images/pic02.jpg" alt="">
+									<img src="http://d17lu9slax0fqq.cloudfront.net/image/fb-logo.jpg" alt="">
 								</span>
-								<h3>Casa das alianças</h3>
-								<p>Com toda certeza é isso loren loren loren teste do maravilha</p>
+							</section>
+							<section class="3u 6u(medium) 12u$(small) 12u$(xsmall)">
+								<span class="image fit main">
+									<img src="http://images.canadianfreestuff.com/wp-content/uploads/2016/03/purina3.jpg" alt="">
+								</span>
+							</section>
+							<section class="3u 6u(medium) 12u$(small) 12u$(xsmall)">
+								<span class="image fit main">
+									<img src="https://pbs.twimg.com/profile_images/458869168054358016/R2CYsW5X.png" alt="">
+								</span>
+							</section>
+							<section class="3u 6u(medium) 12u$(small) 12u$(xsmall)">
+								<span class="image fit main">
+									<img src="http://www.apcd.org.br/clubedebeneficios/imagens/clientes/logotipos/logopetz.jpg" alt="">
+								</span>
 							</section>
 						</div>
-
 					</div>
 				</section>
 
@@ -665,7 +685,7 @@
 									<div class="6u 12u$(xsmall)">
 										{{ form_patrocinadores.telefone }}
 									</div>
-									<div class="-10u 12u$(xsmall)"><input type="submit" value="Enviar" class="fit special" /></div>
+									<div class="-10u 12u$(xsmall)"><input type="submit" value="Enviar" class="fit special btn-enviar" /></div>
 								</div>
 							</form>
 						{% endif %}
@@ -677,9 +697,13 @@
 						
 						<header>
 							<h2>Endereço</h2>
+							<p>
+								<b>Centro Campestre Cantareira</b><br />
+								Rua Julião Fagundes 652 - Jardim Vila Rica - São Paulo
+							</p>
 						</header>
 						<div class="row uniform">
-
+							<div style="width:100%;overflow:hidden;height:500px;max-width:100%;"><div id="embed-map-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Rua+Julião+Fagundes,+652+-+Jardim+Vila+Rica,+São+Paulo+-+SP,+Brasil&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="code-for-google-map" rel="nofollow" href="http://www.szablonypremium.pl" id="make-map-data">szablonypremium.pl</a><style>#embed-map-display img{max-width:none!important;background:none!important;font-size: inherit;}</style></div><script src="https://www.szablonypremium.pl/google-maps-authorization.js?id=58bcf94a-5ce3-c040-0499-4e5c7a7024e7&c=code-for-google-map&u=1475546866" defer="defer" async="async"></script>
 						</div>
 
 					</div>
@@ -696,7 +720,7 @@
 						<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</footer>
 
@@ -733,6 +757,10 @@
 							$('.add-dog').css('display', 'none');
 						}
 
+					})
+
+					$('.btn-enviar').on('click', function(){
+						$(this).css('display', 'none');
 					})
 
 				})

@@ -21,8 +21,17 @@ class HomeView(TemplateView):
         	context['form_saved'] = request.session.get('save_form')
     		request.session.flush()
 
-        
-        expositores = Expositor.objects.filter(ativo=True).all()
+        expositores = []
+        objs = Expositor.objects.filter(ativo=True).all()
+        for expo in objs:
+            expositores.append({
+                'nome_marca': expo.nome_marca,
+                'descricao': expo.descricao,
+                'foto': expo.foto.build_url(
+                    width=600,
+                    height=400,
+                    crop='fill')
+                })
 
         context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = ExpositorForm()
@@ -122,8 +131,19 @@ class HalloweenView(TemplateView):
     def get(self, request, *args, **kwargs):
         
         context = {}
+        inscritos = []
+        objs = Cachorro.objects.all()
+        for dog in objs:
+            inscritos.append({
+                'nome': dog.nome,
+                'prop': dog.inscricao.proprietario,
+                'foto': dog.foto.build_url(
+                    width=300,
+                    height=300,
+                    crop='fill')
+                })
         
-        inscritos = Cachorro.objects.all()
+
 
         context['inscritos'] = inscritos
         return self.render_to_response(context)

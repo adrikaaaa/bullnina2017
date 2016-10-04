@@ -4093,7 +4093,7 @@
 .faixa-aviso-preco{
 	background-color: #DF013A;
 	text-align: center;
-	height: 3em;
+	height: auto;
 	width: 100%;
 	margin-top: 40px;
 }

@@ -1,8 +1,7 @@
 # coding: utf8
 from django.db import models
 from django.utils import timezone
-from imagekit.models import ProcessedImageField
-from imagekit.processors import ResizeToFill
+from cloudinary.models import CloudinaryField
 from utils import generate_image_filename
 
 REGIOES = (
@@ -91,11 +90,8 @@ class Cachorro(models.Model):
 							verbose_name=u"Raça")
 	idade = models.CharField(choices=IDADES, max_length=20,
 							 verbose_name=u"Idade do cachorro")
-	foto = ProcessedImageField(upload_to=generate_image_filename, blank=False,
-                                processors=[ResizeToFill(300, 300)],
-                                format='JPEG',
-                                options={'quality': 100},
-                                null=False)
+	foto = CloudinaryField('image')
+
 	vacinado = models.BooleanField(
 			default=False,
 			verbose_name=u"Vacinado?")
@@ -116,11 +112,7 @@ class Expositor(models.Model):
 							verbose_name=u"Ramo da marca")
 	descricao = models.TextField(max_length=200,
 								 verbose_name=u"Breve descrição")
-	foto = ProcessedImageField(upload_to=generate_image_filename, blank=False,
-                                processors=[ResizeToFill(600, 400)],
-                                format='JPEG',
-                                options={'quality': 100},
-                                null=False)
+	foto = CloudinaryField('image')
 	data_criacao = models.DateTimeField(
 	        default=timezone.now)
 	ativo = models.BooleanField(

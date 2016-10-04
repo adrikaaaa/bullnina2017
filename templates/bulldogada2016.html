@@ -24,9 +24,9 @@
 						<div class="row">
 							{% for inscrito in inscritos %}	
 								<div class="3u 12u$(medium) t-center content-dog">
-									<div class="circle-avatar" style="background-image:url(/media/{{inscrito.foto}})"></div>
+									<div class="circle-avatar" style="background-image:url({{inscrito.foto}})"></div>
 									<h3>{{ inscrito.nome }}</h3>
-									<p><b>Proprietario:</b> {{inscrito.inscricao.proprietario}}</p>
+									<p><b>Proprietario:</b> {{inscrito.prop}}</p>
 								</div>
 							{% endfor %}
 						</div>
