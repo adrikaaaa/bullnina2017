@@ -218,7 +218,7 @@ class HalloweenView(TemplateView):
         
         context = {}
         inscritos = []
-        objs = Cachorro.objects.all()
+        objs = Cachorro.objects.order_by('?').all()
         for dog in objs:
             inscritos.append({
                 'nome': dog.nome,
