@@ -220,16 +220,20 @@ class HalloweenView(TemplateView):
         inscritos = []
         objs = Cachorro.objects.order_by('?').all()
         for dog in objs:
+            splited_name = str(dog.inscricao.proprietario).split(" ")
+            try:
+                final_name = "{0} {1}".format(splited_name[0],
+                                              splited_name[-1])
+            except Exception:
+                final_name = dog.inscricao.proprietario    
             inscritos.append({
                 'nome': dog.nome,
-                'prop': dog.inscricao.proprietario,
-                'foto': dog.foto.build_url(
+                'prop': final_name,
+                'foto': str(dog.foto.build_url(
                     width=300,
                     height=300,
-                    crop='fill')
+                    crop='fill'))+"?v=1"
                 })
-        
-
 
         context['inscritos'] = inscritos
         return self.render_to_response(context)
