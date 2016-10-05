@@ -82,6 +82,8 @@ class HomeView(TemplateView):
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = PatrocinadorForm()
         context['cachorro_form'] = formset
+        context['expositores'] = expositores
+        context['numero_inscricao'] = Inscricao.objects.count()
         
         return self.render_to_response(context)
 
@@ -90,6 +92,8 @@ class FormExpositoresView(TemplateView):
     template_name = 'index.html'
 
     def get(self, request, *args, **kwargs):
+
+        expositores = []
 
         objs = Expositor.objects.filter(ativo=True).all()
         for expo in objs:
@@ -108,7 +112,9 @@ class FormExpositoresView(TemplateView):
         context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = PatrocinadorForm()
-        
+        context['expositores'] = expositores
+        context['numero_inscricao'] = Inscricao.objects.count()
+
         return self.render_to_response(context)
 
     def post(self, request, *args, **kwargs):
@@ -118,6 +124,8 @@ class FormExpositoresView(TemplateView):
         	form_expositor.save()
         	request.session['save_form'] = "expo"
         	return HttpResponseRedirect('/#eight')
+
+        expositores = []
 
         objs = Expositor.objects.filter(ativo=True).all()
         for expo in objs:
@@ -136,7 +144,9 @@ class FormExpositoresView(TemplateView):
         context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = form_expositor
         context['form_patrocinadores'] = PatrocinadorForm()
-        
+        context['expositores'] = expositores
+        context['numero_inscricao'] = Inscricao.objects.count()
+
         return self.render_to_response(context)
 
 
@@ -144,6 +154,8 @@ class FormPatrocinadoresView(TemplateView):
     template_name = 'index.html'
 
     def get(self, request, *args, **kwargs):
+
+        expositores = []
         
         objs = Expositor.objects.filter(ativo=True).all()
         for expo in objs:
@@ -162,7 +174,9 @@ class FormPatrocinadoresView(TemplateView):
         context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = PatrocinadorForm()
-        
+        context['expositores'] = expositores
+        context['numero_inscricao'] = Inscricao.objects.count()
+
         return self.render_to_response(context)
 
     def post(self, request, *args, **kwargs):
@@ -171,6 +185,8 @@ class FormPatrocinadoresView(TemplateView):
         	form_patrocinador.save()
         	request.session['save_form'] = "patro"
         	return HttpResponseRedirect('/#ten')
+
+        expositores = []    
 
         objs = Expositor.objects.filter(ativo=True).all()
         for expo in objs:
@@ -189,7 +205,9 @@ class FormPatrocinadoresView(TemplateView):
        	context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = form_patrocinador
-        
+        context['expositores'] = expositores
+        context['numero_inscricao'] = Inscricao.objects.count()
+
         return self.render_to_response(context)
 
 
