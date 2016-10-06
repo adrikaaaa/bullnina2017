@@ -1,4 +1,5 @@
 #! /usr/bin/env python2.7
+import re
 from django.views.generic import TemplateView
 from forms import (InscricaoForm,
 				   CachorroForm,
@@ -220,19 +221,21 @@ class HalloweenView(TemplateView):
         inscritos = []
         objs = Cachorro.objects.order_by('?').all()
         for dog in objs:
-            splited_name = str(dog.inscricao.proprietario).split(" ")
+            image = str(dog.foto.build_url(
+                    width=300,
+                    height=300,
+                    crop='fill'))
+            final_image_name = re.sub(r'w_300/[^/]+','w_300', image)
             try:
                 final_name = "{0} {1}".format(splited_name[0],
                                               splited_name[-1])
             except Exception:
+                
                 final_name = dog.inscricao.proprietario    
             inscritos.append({
                 'nome': dog.nome,
                 'prop': final_name,
-                'foto': str(dog.foto.build_url(
-                    width=300,
-                    height=300,
-                    crop='fill'))+"?v=1"
+                'foto': final_image_name,
                 })
 
         context['inscritos'] = inscritos
