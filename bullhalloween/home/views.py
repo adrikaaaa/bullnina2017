@@ -216,7 +216,7 @@ class HalloweenView(TemplateView):
     template_name = 'bulldogada2016.html'
 
     def get(self, request, *args, **kwargs):
-        
+
         context = {}
         inscritos = []
         objs = Cachorro.objects.order_by('?').all()
@@ -231,11 +231,11 @@ class HalloweenView(TemplateView):
                 final_name = "{0} {1}".format(splited_name[0],
                                               splited_name[-1])
             except Exception:
-                
+
                 final_name = dog.inscricao.proprietario    
             inscritos.append({
-                'nome': dog.nome,
-                'prop': final_name,
+                'nome': unicode(dog.nome),
+                'prop': unicode(final_name),
                 'foto': final_image_name,
                 })
 
