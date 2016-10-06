@@ -221,14 +221,14 @@ class HalloweenView(TemplateView):
         inscritos = []
         objs = Cachorro.objects.order_by('?').all()
         for dog in objs:
-            splited_name = str(dog.inscricao.proprietario).split(' ')
+            splited_name = dog.inscricao.proprietario.split(' ')
             image = str(dog.foto.build_url(
                     width=300,
                     height=300,
                     crop='fill'))
             final_image_name = re.sub(r'w_300/[^/]+','w_300', image)
             try:
-                final_name = "{0} {1}".format(splited_name[0],
+                final_name = u"{0} {1}".format(splited_name[0],
                                               splited_name[-1])
             except Exception:
 
