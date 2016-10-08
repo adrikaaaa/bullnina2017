@@ -34,7 +34,7 @@ class HomeView(TemplateView):
                     crop='fill')
                 })
 
-        context['numero_inscricao'] = Inscricao.objects.count()    
+        context['numero_inscricao'] = Cachorro.objects.count()    
         context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = PatrocinadorForm()
@@ -77,14 +77,13 @@ class HomeView(TemplateView):
 
         context = {}
         
-        context['numero_inscricao'] = Inscricao.objects.count()   
+        context['numero_inscricao'] = Cachorro.objects.count()   
         
         context['form_inscricao'] = form_inscricao
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = PatrocinadorForm()
         context['cachorro_form'] = formset
         context['expositores'] = expositores
-        context['numero_inscricao'] = Inscricao.objects.count()
         
         return self.render_to_response(context)
 
@@ -109,12 +108,11 @@ class FormExpositoresView(TemplateView):
 
         context = {}
         
-        context['numero_inscricao'] = Inscricao.objects.count()
+        context['numero_inscricao'] = Cachorro.objects.count()
         context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = PatrocinadorForm()
         context['expositores'] = expositores
-        context['numero_inscricao'] = Inscricao.objects.count()
 
         return self.render_to_response(context)
 
@@ -141,12 +139,11 @@ class FormExpositoresView(TemplateView):
 
         context = {}
         
-        context['numero_inscricao'] = Inscricao.objects.count()  
+        context['numero_inscricao'] = Cachorro.objects.count()  
         context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = form_expositor
         context['form_patrocinadores'] = PatrocinadorForm()
         context['expositores'] = expositores
-        context['numero_inscricao'] = Inscricao.objects.count()
 
         return self.render_to_response(context)
 
@@ -171,12 +168,11 @@ class FormPatrocinadoresView(TemplateView):
 
         context = {}
         
-        context['numero_inscricao'] = Inscricao.objects.count()
+        context['numero_inscricao'] = Cachorro.objects.count()
         context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = PatrocinadorForm()
         context['expositores'] = expositores
-        context['numero_inscricao'] = Inscricao.objects.count()
 
         return self.render_to_response(context)
 
@@ -202,12 +198,11 @@ class FormPatrocinadoresView(TemplateView):
 
         context = {}
         
-        context['numero_inscricao'] = Inscricao.objects.count()	
+        context['numero_inscricao'] = Cachorro.objects.count()	
        	context['form_inscricao'] = InscricaoForm()
         context['form_expositores'] = ExpositorForm()
         context['form_patrocinadores'] = form_patrocinador
         context['expositores'] = expositores
-        context['numero_inscricao'] = Inscricao.objects.count()
 
         return self.render_to_response(context)
 
