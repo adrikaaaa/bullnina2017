@@ -28,10 +28,10 @@ class HomeView(TemplateView):
             expositores.append({
                 'nome_marca': expo.nome_marca,
                 'descricao': expo.descricao,
-                'foto': expo.foto.build_url(
+                'foto': str(expo.foto.build_url(
                     width=600,
                     height=400,
-                    crop='fill')
+                    crop='fill')).replace('http://', 'https://')
                 })
 
         context['numero_inscricao'] = Cachorro.objects.count()    
@@ -69,10 +69,10 @@ class HomeView(TemplateView):
             expositores.append({
                 'nome_marca': expo.nome_marca,
                 'descricao': expo.descricao,
-                'foto': expo.foto.build_url(
+                'foto': str(expo.foto.build_url(
                     width=600,
                     height=400,
-                    crop='fill')
+                    crop='fill')).replace('http://', 'https://')
                 })
 
         context = {}
@@ -100,10 +100,10 @@ class FormExpositoresView(TemplateView):
             expositores.append({
                 'nome_marca': expo.nome_marca,
                 'descricao': expo.descricao,
-                'foto': expo.foto.build_url(
+                'foto': str(expo.foto.build_url(
                     width=600,
                     height=400,
-                    crop='fill')
+                    crop='fill')).replace('http://', 'https://')
                 })
 
         context = {}
@@ -131,10 +131,10 @@ class FormExpositoresView(TemplateView):
             expositores.append({
                 'nome_marca': expo.nome_marca,
                 'descricao': expo.descricao,
-                'foto': expo.foto.build_url(
+                'foto': str(expo.foto.build_url(
                     width=600,
                     height=400,
-                    crop='fill')
+                    crop='fill')).replace('http://', 'https://')
                 })
 
         context = {}
@@ -160,10 +160,10 @@ class FormPatrocinadoresView(TemplateView):
             expositores.append({
                 'nome_marca': expo.nome_marca,
                 'descricao': expo.descricao,
-                'foto': expo.foto.build_url(
+                'foto': str(expo.foto.build_url(
                     width=600,
                     height=400,
-                    crop='fill')
+                    crop='fill')).replace('http://', 'https://')
                 })
 
         context = {}
@@ -190,10 +190,10 @@ class FormPatrocinadoresView(TemplateView):
             expositores.append({
                 'nome_marca': expo.nome_marca,
                 'descricao': expo.descricao,
-                'foto': expo.foto.build_url(
+                'foto': str(expo.foto.build_url(
                     width=600,
                     height=400,
-                    crop='fill')
+                    crop='fill')).replace('http://', 'https://')
                 })
 
         context = {}
@@ -231,7 +231,7 @@ class HalloweenView(TemplateView):
             inscritos.append({
                 'nome': unicode(dog.nome),
                 'prop': unicode(final_name),
-                'foto': final_image_name,
+                'foto': str(final_image_name).replace('http://', 'https://'),
                 })
 
         context['inscritos'] = inscritos
