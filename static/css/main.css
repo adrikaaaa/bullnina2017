@@ -4216,3 +4216,7 @@ div.circle-avatar{
 	line-height: 2.1em!important;
 	color: white;
 }
+
+.container-expositor{
+	min-height: 530px!important;
+}
