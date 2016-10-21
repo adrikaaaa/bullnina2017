@@ -33,7 +33,7 @@ class CachorroAdminForm(forms.ModelForm):
         super(CachorroAdminForm, self).__init__(*args, **kwargs)
 
     class Meta:
-    	fields = ('nome', 'raca', 'vacinado', 'vermifugado')
+    	fields = ('nome', 'raca', 'vacinado', 'vermifugado', 'foto')
         model = Cachorro
         
 
